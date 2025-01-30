@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin's Portfolio</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .dark-mode {
+            background-color: #2d2d2d;
+            color: white;
+        }
+
+        .light-mode {
+            background-color: #f4f4f9;
+            color: black;
+        }
+
+        .light-mode header, .light-mode footer {
+            background-color: #f9d342;
+            color: black;
+        }
+
+        .dark-mode header, .dark-mode footer {
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        .toggle-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: inherit;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills li {
+            margin: 5px 0;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <header>
+        <h1>Sachin's Portfolio</h1>
+        <button class="toggle-button" onclick="toggleTheme()">🌙</button>
+    </header>
+    
+    <main>
+        <h2>Welcome to my Portfolio!</h2>
+        <p>Hi, I'm Sachin, a passionate developer. Here are some of my skills:</p>
+        
+        <div class="skills">
+            <h3>Skills:</h3>
+            <ul>
+                <li>C Programming</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>FastAPI</li>
+                <li>SQL</li>
+                <li>MongoDB</li>
+                <li>Nmap, Masscan, Wireshark, Setoolkit</li>
+                <li>Linux, Windows, Android</li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <p>Contact me at:</p>
+            <p>Email: <a href="mailto:sachin1313@galgotiasuniversity.edu.in">sachin1313@galgotiasuniversity.edu.in</a></p>
+            <p>Phone: 8962360157</p>
+            <p>Location: Varanasi, India</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Connect with me on LinkedIn: <a href="https://www.linkedin.com" target="_blank">Sachin's LinkedIn</a></p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.classList.contains("light-mode") ? "light" : "dark";
+            if (currentTheme === "light") {
+                body.classList.replace("light-mode", "dark-mode");
+                document.querySelector('.toggle-button').textContent = "🌕";
+            } else {
+                body.classList.replace("dark-mode", "light-mode");
+                document.querySelector('.toggle-button').textContent = "🌙";
+            }
+        }
+    </script>
+</body>
+</html>
